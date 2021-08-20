@@ -30,6 +30,9 @@ p {
 .topnav {
   display: flex;
   justify-content: space-between;
+  padding-top: 0.5vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
   margin: 50px 20px 50px 20px;
 }
 
@@ -52,7 +55,7 @@ p {
   padding: 0.75rem 0.75rem;
   margin: 0.3125rem;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
   font-family: Roboto, sans-serif;
 }
 .topnav a:hover {
@@ -462,7 +465,7 @@ input[data-error]::after {
   outline: none;
   text-transform: none;
   font-size: 1.3rem;
-  padding: 1px 23px;
+  padding: 12px 35px;
   margin: 0;
   margin-top: 59px;
 }
@@ -617,7 +620,7 @@ footer {
       margin-top: 5px;
   }
 }
-@media screen and (max-width: 580px){
+@media screen and (max-width: 500px){
   .header-logo img {
       width: 150px;
       height: auto;
@@ -657,11 +660,12 @@ footer {
     text-align: left;
   }
 }
-
+@media screen and (min-width: 1000px) {
+.header-logo img {
+  width: 250px;
+}
+}
 @media screen and (max-width: 800px) {
-  .header-logo img {
-    width: 150px;
-  }
 
   .hero-section {
     height: 100%;
