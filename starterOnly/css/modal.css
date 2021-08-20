@@ -531,27 +531,33 @@ footer {
 /* CONFIRMATION SUBMIT MODAL */
 .container-confirmation-submit {
   display: none;
-  background-color: rgba(35, 35, 35, .5);
-  width: 100%;
-  height: 200vh;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  z-index: 1;
   left: 0;
-  right: 0;
-  z-index: 3;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
 }
 
 .submitted-form {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  position: fixed;
-  top: 0px;
+  margin: 5% auto;
+    width: 100%;
+    height: 80%;
+    max-width: 500px;
+    background: #232323;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding-top: 10px;
 }
-
+@media screen and (max-width: 580px){
+  .submitted-form {
+      margin: 18% auto;
+  }
+}
 .close-modal-submit {
   position: absolute;
   right: 15px;
