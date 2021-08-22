@@ -59,6 +59,16 @@ function checkBirthdate() {
     birthdate.style.border = 'solid #279e7a 0.19rem';
     return true;
 }
+function resetNumber()
+{
+    var champ = document.getElementById('birthdate');
+    while (champ.value.match(/[^0-9]/))
+    {
+        champ.value = champ.value.replace(/[^0-9]/,'');
+        birthdate.parentElement.setAttribute('data-error-visible', 'true');
+        birthdate.style.border = '2px solid #e54858';
+    }
+}
 
 // NUMBER OF TOURNAMENTS CHECK
 function checkTournamentsQuantity() {

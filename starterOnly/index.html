@@ -78,7 +78,8 @@
             <!-- BIRTHDATE -->
             <div class="formData" data-error="Vous devez entrer votre date de naissance." data-error-visible="false">
               <label for="birthdate">Date de naissance</label><br>
-              <input class="text-control" type="date" id="birthdate" name="birthdate" /><br>
+              <input class="text-control" type="date" id="birthdate" name="birthdate" onkeyup="resetNumber();" /><br>
+              
             </div>
             <!-- TOURNAMENTS -->
             <div class="formData" data-error="Veuillez saisir une valeur numérique." data-error-visible="false">
@@ -154,9 +155,9 @@
       Copyright 2014 - 2021, GameOn Inc.
     </p>
   </footer>
-  <script src="js/modal.js"></script>
   <script src="js/validation.js"></script>
   <script src="js/confirmation.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>
