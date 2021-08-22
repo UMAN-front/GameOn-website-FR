@@ -31,14 +31,10 @@ function closeModal() {
   checkbox1.parentElement.setAttribute('data-error-visible', 'false');
 
   allLocations.setAttribute('data-error-visible', 'false');
+
+  form.reset();
 }
 closeBtn[0].addEventListener('click', closeModal);
-rest.forEach((formData) => parentElement.addEventListener('change', reset));
-
-function reset() {
-console.log("Bonjour");
-
-}
 
 // ------ DISPLAY NAV RESPONSIVE ------ //
 // EDIT NAV
