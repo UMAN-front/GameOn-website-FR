@@ -78,13 +78,13 @@
             <!-- BIRTHDATE -->
             <div class="formData" data-error="Vous devez entrer votre date de naissance." data-error-visible="false">
               <label for="birthdate">Date de naissance</label><br>
-              <input class="text-control" type="date" id="birthdate" name="birthdate" onkeydown="return false"; /><br>
+              <input class="text-control" type="date" id="birthdate" min="1980-01-31" max="2021-08-31" name="birthdate" onkeydown="return false"; /><br>
               
             </div>
             <!-- TOURNAMENTS -->
             <div class="formData" data-error="Veuillez saisir une valeur numérique." data-error-visible="false">
               <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-              <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="0">
+              <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="5" placeholder="0">
             </div>
             <!-- LOCATIONS -->
             <p class="text-label">Quelles villes ?</p>
