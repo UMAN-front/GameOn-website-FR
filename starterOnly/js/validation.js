@@ -49,27 +49,30 @@ function checkEmail() {
 }
 
 // BIRTHDATE CHECK
+birthdate.addEventListener('focusout', function () {checkBirthdate()});
 function checkBirthdate() {
-    if (birthdate.value.trim().length !== 10) {
-        birthdate.parentElement.setAttribute('data-error-visible', 'true');
-        birthdate.style.border = '2px solid #e54858';
-        return false;
-    }
+  //chekc if birthdate is correct
+  if (checkIfEmpty(birthdate)) return true;
+  return false;
+}
+function checkIfEmpty(field) { //Check if field is empty
+    if (isEmpty(field.value.trim())) {    //Trim is in case people just enter a space.
+      // Set field as Invalid
+    birthdate.parentElement.setAttribute('data-error-visible', 'true');
+    birthdate.style.border = '2px solid #e54858';
+      return false;
+    } else {
+      // Set field as Valid
     birthdate.parentElement.setAttribute('data-error-visible', 'false');
     birthdate.style.border = 'solid #279e7a 0.19rem';
-    return true;
-}
-function resetNumber()
-{
-    var champ = document.getElementById('birthdate');
-    while (champ.value.match(/[^0-9]/))
-    {
-        champ.value = champ.value.replace(/[^0-9]/,'');
-        birthdate.parentElement.setAttribute('data-error-visible', 'true');
-        birthdate.style.border = '2px solid #e54858';
+      return true;
     }
-}
-
+  }
+function isEmpty(value) { //Check for empty field
+    if (value === '') return true;
+    return false;
+  }
+  
 // NUMBER OF TOURNAMENTS CHECK
 function checkTournamentsQuantity() {
     if (quantity.value.trim().length === 0 || isNaN(quantity.value.trim()) === true || quantity.value.trim() < 0) {
