@@ -51,7 +51,7 @@ function checkEmail() {
 // BIRTHDATE CHECK
 birthdate.addEventListener('focusout', function () {checkBirthdate()});
 function checkBirthdate() {
-  //chekc if birthdate is correct
+  //check if birthdate is correct
   if (checkIfEmpty(birthdate)) return true;
   return false;
 }
@@ -72,7 +72,7 @@ function isEmpty(value) { //Check for empty field
     if (value === '') return true;
     return false;
   }
-  
+
 // NUMBER OF TOURNAMENTS CHECK
 function checkTournamentsQuantity() {
     if (quantity.value.trim().length === 0 || isNaN(quantity.value.trim()) === true || quantity.value.trim() < 0) {
